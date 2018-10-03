@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'war'
+apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
+
+gretty {
+	httpPort = 3721
+	// servletContainer = 'tomcat8'
+	// managedClassReload = true
+}
+
+repositories { 
+  jcenter()
+}
+
+dependencies {
+  providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
+}
+
+war { 
+  destinationDir  file('D:/apache-tomcat-8.5.33/webapps')
+  archiveName 'simple-java-web.war'
+}
