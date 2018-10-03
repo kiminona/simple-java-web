@@ -16,7 +16,4 @@ dependencies {
   providedCompile 'javax.servlet:javax.servlet-api:3.1.0' 
 }
 
-war { 
-  destinationDir  file('D:/apache-tomcat-8.5.33/webapps')
-  archiveName 'simple-java-web.war'
-}
+war {}
